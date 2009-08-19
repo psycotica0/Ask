@@ -1,0 +1,28 @@
+Ask.
+
+This app just takes in lines on stdin and asks you about each of them.
+If you answer 'y' or 'Y' it outputs the line on stdout.
+
+Otherwise it doesn't.
+
+Intended to be used as a filter.
+
+Ex. 
+ls | ask | xargs rm
+(Not recommended)
+
+OR
+
+ls | grep '^somePrefix' | ask | xargs git add
+
+I guess if you wanted you could actually use it to filter lines in a file
+cat animals | ask > animalsThatAreCute
+
+You could also just use it with single items in a loop where something more important happens.
+
+while read url; do
+	curl "$line" | less
+	echo "$line" | ask >> BookMark
+done
+
+To make up some useless example.
