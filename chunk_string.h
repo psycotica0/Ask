@@ -20,4 +20,8 @@ int chunk_readline(FILE*, string_chunk*);
 
 void chunk_printline(FILE*, string_chunk*);
 
+string_chunk* new_chunk_string();
+
+void chunk_string_copy(string_chunk* src, string_chunk* dst);
+
 #endif

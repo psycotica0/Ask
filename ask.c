@@ -8,7 +8,7 @@ int main() {
 	FILE* tty = NULL;
 
 	tty = fopen("/dev/tty", "r+");
-	current = malloc(sizeof(string_chunk));
+	current = new_chunk_string();
 
 	while (!feof(stdin)) {
 		if (chunk_readline(stdin, current) > 0) {
